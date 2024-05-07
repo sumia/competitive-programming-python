@@ -38,3 +38,6 @@ def products(nums):
 
 
 print(products([1, 2, 3, 4, 5]))
+
+# Time : O(n)
+# Space: O(n)
