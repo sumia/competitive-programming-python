@@ -16,21 +16,20 @@ class DoublyLinkedList:
             self.tail = node
             return
         
-        curr = self.head
-        while curr.next:
-            curr = curr.next
         
-        curr.next = node
-        node.prev = curr
+        self.tail.next = node
+        node.prev = self.tail
         self.tail = node
     
     def prepend(self, val):
         node = Node(val)
         if self.head == None:
             self.head = node
+            self.tail = node
             return
-        self.head.prev = node
+        
         node.next = self.head
+        self.head.prev = node
         self.head = node
 
     
